@@ -1,0 +1,13 @@
+class User{
+    constructor(name, score){
+        this.name = name;
+        this.score = score;
+    }
+
+    increment() {
+        this.score++   
+    }
+
+    
+
+}
