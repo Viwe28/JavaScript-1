@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Box {
+    margin: 0 auto;
+    margin-top: 15vh;
+    width: 60%;
+    max-width: 550px;
+    border: 1px solid rebeccapurple;
+    
+}
+
+button {
+    padding: 10px 25px;
+    margin: 12px;
+    font-size: 20px;
+
+}
+
+h1 {
+    margin-bottom: 18px;
+
+}
+
+h2 {
+    margin-bottom: 25px;
+}
