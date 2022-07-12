@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book library</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <div class="Box-row">
+        <h1>Book Library</h1>
+
+        <ul class="Nav-list">
+            <li class="List-item"><a href="#">Home</a></li>
+        </ul>
+    </div>
+    </nav>
+
+    
+    <div class="Box">
+        <form id="LibraryForm">
+            <label for="Name">Book Name</label>
+            <input type="Text" id="Name" class="BookName">
+          <br>
+          <label for="Author">Author</label>
+          <input type="Text" id="Author" class="BookAuthor">
+          <br>
+         
+          <h3>Type of book</h3>
+          <input type="Radio" name="Type" id="Fiction" value="Fiction">
+          <label for="Fiction">Fiction</label>
+       <br>
+          <input type="Radio" name="Type" id="Computer" value="Computer Programming">
+          <label for="Computer">Computer Programming</label>
+          <br>
+          <input type="Radio" name="Type" id="Cooking" value="Cooking">
+          <label for="Cooking">Cooking</label>
+
+        <br>
+
+          <button type="Submit" id="AddBook">Add Book</button>
+
+        </form>
+    </div>
+    <hr />
+
+    <div class="Box">
+        <div id="Message"></div>
+        <div class="Header">
+            <p>Book Name</p>
+            <p>Author</p>
+            <p>Type</p>
+        </div>
+        <div id="Library">
+           
+        </div>
+    </div>
+
+    <script src="./code.js"></script>
+</body>
+</html>
