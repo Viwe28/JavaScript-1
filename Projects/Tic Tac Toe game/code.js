@@ -36,18 +36,18 @@ const getSymbol = () => symbol;
     const isWinner = () => {
       let finished = false;
   
-      const h = ["00-01-02", "10-11-12", "20-21-22"]; // horizontal winning combination
-      const v = ["00-10-20", "01-11-21", "02-12-22"]; // vertical winning combination
-      const d = ["00-11-22", "20-11-02"]; //digonal winning combinatio
+      const h = ["00-01-02", "10-11-12", "20-21-22"]; //this is the horizontal winning combination
+      const v = ["00-10-20", "01-11-21", "02-12-22"]; //this is the vertical winning combination
+      const d = ["00-11-22", "20-11-02"]; //this is the diagonal winning combination
   
       [...h, ...v, ...d].forEach((move) => {
         let line = move.split("-");
         console.log(line);
         if (
           boardArray[line[0][0]][line[0][1]] ===
-            boardArray[line[1][0]][line[1][1]] &&
+          boardArray[line[1][0]][line[1][1]] &&
           boardArray[line[1][0]][line[1][1]] ===
-            boardArray[line[2][0]][line[2][1]] &&
+          boardArray[line[2][0]][line[2][1]] &&
           boardArray[line[0][0]][line[0][1]] !== ""
         ) {
           finished = true;
