@@ -1,7 +1,7 @@
-const computerChoice = document.getElementById("computer-choice");
-const yourChoice = document.getElementById("your-choice");
-let resultD = document.getElementById("result");
-let yourTurn;
+const computerChoice = document.getElementById("Computer-choice");
+const userChoice = document.getElementById("User-choice");
+let resultD = document.getElementById("Result");
+let userTurn;
 let computerTurn;
 let result;
 
@@ -9,12 +9,12 @@ let btns = document.querySelectorAll("button");
 console.log(btns);
 
 btns.forEach((btn)=>{
-   btn.addEventListener("click", yourSelection)  
+   btn.addEventListener("click", userSelection)  
 })
 
-function yourSelection(x){
-   yourTurn = x.target.id;
-   yourChoice.textContent = yourTurn;
+function userSelection(x){
+   userTurn = x.target.id;
+   userChoice.textContent = userTurn;
 
 computerSelection();
 displayResult();
@@ -24,41 +24,41 @@ function computerSelection(){
 const randomNumber = Math.floor(Math.random() * 3) + 1
 console.log(randomNumber)
 if(randomNumber === 1) {
-    computerTurn = "rock"
+    computerTurn = "Rock"
     computerChoice.innerText = computerTurn;
 }
 if(randomNumber === 2) {
     
-    computerTurn = "scissor"
+    computerTurn = "Scissor"
     computerChoice.innerText = computerTurn;
 }
 if(randomNumber === 3) {
-    computerTurn = "paper"
+    computerTurn = "Paper"
     computerChoice.innerText = computerTurn;
 }
 }
 
 function displayResult() {
 
-if(yourTurn === computerTurn){
+if(userTurn === computerTurn){
     result = "Draw"
 }
-if(computerTurn ==="rock" && yourTurn === "paper") {
+if(computerTurn ==="Rock" && userTurn === "Paper") {
     result = "You win"
 }
-if(computerTurn === "rock" && yourTurn ==="scissor") {
+if(computerTurn === "Rock" && userTurn ==="Scissor") {
     result = "You lost !!!"
 }
-if(computerTurn ==="paper" && yourTurn === "scissor"){
+if(computerTurn ==="Paper" && userTurn === "Scissor"){
     result = "You win"
 }
-if(computerTurn === "paper" && yourTurn === "rock") {
+if(computerTurn === "Paper" && userTurn === "Rock") {
     result = "You lost"
 }
-if(computerTurn==="scissor" && yourTurn === "rock") {
+if(computerTurn==="Scissor" && userTurn === "Rock") {
     result = "You win"
 }
-if(computerTurn === "scissor" && yourTurn === "paper"){
+if(computerTurn === "Scissor" && userTurn === "Paper"){
     result = "You lost"
 }
 
